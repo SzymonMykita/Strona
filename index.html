@@ -1,0 +1,76 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/fontello.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet"> 
+<meta charset="utf-8"/>
+</head>
+<body>
+<div id="zmiana_koloru">
+<div id="wrapper">
+<div id="header"><span style="color:#a4c639"></span> <span style="color:#FF6633">szymon</span>mykita.com</div></div>
+<div style="cler:both;"></div>
+<div class="nav">
+<ol>
+<li><a href="#">Strona główna</a></li>
+<li><a href="#">O projekcie</a></li>
+<li><a href="#">Kontakt</a></li>
+</ol>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+</script></div>
+
+<div id="content">
+<div class="zmiana_koloru">
+
+<div id="login">
+</br>
+<form>
+Login
+<input type="text">
+</br></br>
+Hasło
+<input type="password">
+</br></br>
+<input type="submit" value="Zaloguj się">
+</form>
+
+</br></br>
+</div>
+</div>
+<div id="socials">
+<div class="socialdiv">
+<div class="fb"><i class="icon-facebook"></i></div>
+ <div class="yt"><i class="icon-youtube"></i></div>
+ <div class="tw"><i class="icon-twitter"></i></div>
+ <div class="gm"><i class="icon-gplus"></i></div>
+ <div style="clear:both"></div></div>
+</div>
+<div id="footer">Created Szymon Mykita &copy; 2018 All rights reserved. </div>
+</div>
+</div>
+</div>
+</body>
+</html>
